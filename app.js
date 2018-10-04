@@ -1,13 +1,14 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var apiRouter = require('./routes/api');
+const indexRouter = require('./routes/index');
+const apiRouter = require('./routes/api');
 
-var app = express();
+const app = express();
+const http = require("http");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -38,4 +39,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+setTimeout(() => {
+  http.get('https://smart-cloud-mock-api.herokuapp.com');
+}, 15*60000);
 module.exports = app;
