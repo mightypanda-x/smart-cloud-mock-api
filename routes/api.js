@@ -1,18 +1,23 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const _ = require('lodash');
 
 /* GET users listing. */
 router.get('/dataPie', function(req, res) {
   const jsonData = [{
-    key: 'Red',
-    value: 50
+    key: 'Germany',
+    value: _.random(1, 100, false)
   }, {
-    key: 'Blue',
-    value: 32
+    key: 'Russia',
+    value: _.random(1, 100, false)
   }, {
-    key: 'Green',
-    value: 72
+    key: 'USA',
+    value: _.random(1, 100, false)
+  }, {
+    key: 'Europe',
+    value: _.random(1, 100, false)
   }];
+
   setTimeout(() => {
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Access-Control-Request-Method', '*');
