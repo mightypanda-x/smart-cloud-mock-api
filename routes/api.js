@@ -48,6 +48,77 @@ router.get('/smart-start/union', function(req, res) {
   }, 200);
 });
 
+router.get('/smart-start/user/widgetPref', function(req, res) {
+    const jsonData = [
+        {
+            id: 'widget1',
+            componentId: 'data-pie',
+            product: 'SmartStart',
+            title: 'Union Breakdown',
+            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/smart-start/union',
+            actions: [
+                {
+                    label: 'Union Crew',
+                    link: 'http://google.com'
+                },
+                {
+                    label: 'Non-Union Crew',
+                    link: 'http://facebook.com'
+                }
+            ],
+            doughnut: false,
+            semi: false
+        },
+        {
+            id: 'widget2',
+            componentId: 'data-pie',
+            product: 'SmartTime',
+            title: 'Ethnicity',
+            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/dataPie',
+            actions: [
+                {
+                    label: 'Estimate',
+                    link: 'http://google.com'
+                },
+                {
+                    label: 'Analyze',
+                    link: 'http://facebook.com'
+                }
+            ],
+            doughnut: true,
+            semi: false
+        },
+        {
+            id: 'widget3',
+            componentId: 'data-pie',
+            product: 'SmartStart',
+            title: 'Exception Crew',
+            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/smart-start/exception-crew',
+            actions: [
+                {
+                    label: 'Estimate',
+                    link: 'http://google.com'
+                },
+                {
+                    label: 'Analyze',
+                    link: 'http://facebook.com'
+                }
+            ],
+            chartType: 'horizontalBar',
+            doughnut: false,
+            semi: false
+        }
+    ];
+
+    setTimeout(() => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Request-Method', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+        res.setHeader('Access-Control-Allow-Headers', '*');
+        res.send(jsonData);
+    }, 200);
+});
+
 router.get('/smart-start/exception-crew', function(req, res) {
     const jsonData = [{
         key: 'Loanout',
