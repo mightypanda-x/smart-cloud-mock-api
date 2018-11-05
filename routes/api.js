@@ -119,6 +119,32 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
     }, 200);
 });
 
+router.get('/smart-start/widgets', function(req, res) {
+    const jsonData = [{
+        id: '1',
+        product: 'SmartStart',
+        title: 'Union Breakdown',
+        iconImage: '../../assets/images/preview.jpg',
+        description: 'Visually see how the crew is split between Union, Non Union and Non Affiliate categories.' +
+        ' You can perform a variety of operations through this intuitive and functional widget.'
+    }, {
+        id: '2',
+        product: 'SmartStart',
+        title: 'Exception Crew',
+        iconImage: '../../assets/images/preview.jpg',
+        description: 'Visually see how the crew is split between Loanout, Conflict Of interest, Allowances & Rentals and I-9 Overdue categories.' +
+        ' You can perform a variety of operations through this intuitive and functional widget.'
+    }];
+
+    setTimeout(() => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Request-Method', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+        res.setHeader('Access-Control-Allow-Headers', '*');
+        res.send(jsonData);
+    }, 200);
+});
+
 router.get('/smart-start/exception-crew', function(req, res) {
     const jsonData = [{
         key: 'Loanout',
