@@ -55,7 +55,7 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
             componentId: 'data-pie',
             product: 'SmartStart',
             title: 'Union Breakdown',
-            apiUrl: 'http://localhost:8080/api/smart-start/union',
+            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/smart-start/union',
             actions: [
                 {
                     label: 'Union Crew',
@@ -74,7 +74,7 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
             componentId: 'data-pie',
             product: 'SmartTime',
             title: 'Ethnicity',
-            apiUrl: 'http://localhost:8080/api/dataPie',
+            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/dataPie',
             actions: [
                 {
                     label: 'Estimate',
@@ -93,7 +93,7 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
             componentId: 'data-pie',
             product: 'SmartStart',
             title: 'Exception Crew',
-            apiUrl: 'http://localhost:8080/api/smart-start/exception-crew',
+            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/smart-start/exception-crew',
             actions: [
                 {
                     label: 'Estimate',
