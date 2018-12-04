@@ -77,12 +77,8 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
             apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/dataPie',
             actions: [
                 {
-                    label: 'Estimate',
+                    label: 'More Info',
                     link: 'http://google.com'
-                },
-                {
-                    label: 'Analyze',
-                    link: 'http://facebook.com'
                 }
             ],
             doughnut: true,
@@ -96,12 +92,8 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
             apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/smart-start/exception-crew',
             actions: [
                 {
-                    label: 'Estimate',
+                    label: 'Download Report',
                     link: 'http://google.com'
-                },
-                {
-                    label: 'Analyze',
-                    link: 'http://facebook.com'
                 }
             ],
             chartType: 'horizontalBar',
