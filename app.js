@@ -39,7 +39,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-setTimeout(() => {
-  http.get('https://smart-cloud-mock-api.herokuapp.com');
-}, 15*60000);
 module.exports = app;

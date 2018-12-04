@@ -55,7 +55,7 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
             componentId: 'data-pie',
             product: 'SmartStart',
             title: 'Union Breakdown',
-            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/smart-start/union',
+            apiUrl: 'http://localhost:8080/api/smart-start/union',
             actions: [
                 {
                     label: 'Union Crew',
@@ -74,7 +74,7 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
             componentId: 'data-pie',
             product: 'SmartTime',
             title: 'Ethnicity',
-            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/dataPie',
+            apiUrl: 'http://localhost:8080/api/dataPie',
             actions: [
                 {
                     label: 'Estimate',
@@ -93,7 +93,7 @@ router.get('/smart-start/user/widgetPref', function(req, res) {
             componentId: 'data-pie',
             product: 'SmartStart',
             title: 'Exception Crew',
-            apiUrl: 'https://smart-cloud-mock-api.herokuapp.com/api/smart-start/exception-crew',
+            apiUrl: 'http://localhost:8080/api/smart-start/exception-crew',
             actions: [
                 {
                     label: 'Estimate',
@@ -124,7 +124,7 @@ router.get('/smart-start/widgets', function(req, res) {
         id: '1',
         product: 'SmartStart',
         title: 'Union Breakdown',
-        iconImage: '../../assets/images/preview.jpg',
+        iconImage: '../../assets/images/union.jpg',
         description: 'Visually see how the crew is split between Union, Non Union and Non Affiliate categories.' +
         ' You can perform a variety of operations through this intuitive and functional widget.'
     }, {
