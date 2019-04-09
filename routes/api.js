@@ -5,16 +5,19 @@ const _ = require('lodash');
 /* GET users listing. */
 router.get('/dataPie', function(req, res) {
   const jsonData = [{
-    key: 'Germany',
+    key: 'White',
     value: _.random(1, 100, false)
   }, {
-    key: 'Russia',
+    key: 'Black/African American',
     value: _.random(1, 100, false)
   }, {
-    key: 'USA',
+    key: 'Asian',
     value: _.random(1, 100, false)
   }, {
-    key: 'Europe',
+    key: 'Hispanic/Latino',
+    value: _.random(1, 100, false)
+  }, {
+    key: 'American Indian/Alaska Native',
     value: _.random(1, 100, false)
   }];
 
@@ -159,6 +162,10 @@ router.get('/smart-start/exception-crew', function(req, res) {
         res.setHeader('Access-Control-Allow-Headers', '*');
         res.send(jsonData);
     }, 200);
+});
+
+schedule.scheduleJob('*/15 * * * *', function() {
+    http.get("https://smart-cloud-mock-api.herokuapp.com");
 });
 
 module.exports = router;
