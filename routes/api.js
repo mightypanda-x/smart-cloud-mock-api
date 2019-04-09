@@ -166,7 +166,7 @@ router.get('/smart-start/exception-crew', function(req, res) {
     }, 200);
 });
 
-schedule.scheduleJob('*/1 * * * *', function() {
+schedule.scheduleJob('*/14 * * * *', function() {
     http.get("http://smart-cloud-mock-api.herokuapp.com");
 });
 
